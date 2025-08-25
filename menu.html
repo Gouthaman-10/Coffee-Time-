@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Time ! | Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./menu.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="logo">
+                <div class="logo__img">
+                    <img src="./images/project-logo.png" alt="">
+                </div>
+                <span class="logo__text">Coffee Time !</span>
+            </a>
+
+            <nav>
+                <button class="nav__btn" onclick="window.location.href='index.html'">
+                    <i class="ri-home-9-fill"></i> Home
+                </button>
+                <button class="nav__btn cart" id="cart-btn">
+                    <i class="ri-shopping-cart-2-fill"></i> Cart
+                    <span class="cart__count">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="menu__container">
+        <section class="hero">
+            <h1 class="hero__title">Our Coffee Menu</h1>
+            <p class="hero__subtitle">Enjoy our premium coffees, made from the best beans and brewed with care just for
+                you.</p>
+        </section>
+
+        <section class="filter__section">
+            <h2 class="filter__title">Filter by Category</h2>
+            <div class="filter__scroll">
+                <button class="filter__chip active" data-filter="all">All Items</button>
+                <button class="filter__chip" data-filter="hot">Hot Coffee</button>
+                <button class="filter__chip" data-filter="cold">Cold Coffee</button>
+                <button class="filter__chip" data-filter="signature">Signature & Fusion</button>
+                <button class="filter__chip" data-filter="dessert">Indulgent & Dessert</button>
+                <button class="filter__chip" data-filter="vegan">Vegan & Healthy</button>
+                <button class="filter__chip" data-filter="seasonal">Seasonal Specials</button>
+            </div>
+        </section>
+
+        <div class="products__grid" id="products__grid"></div>
+    </div>
+
+    <div class="floating__cart" id="floating-cart">
+       <i class="ri-shopping-cart-2-fill"></i>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">Your Cart</h2>
+                <button class="close-cart" id="close-cart">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">₹ 0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">
+                    <i class="ri-bank-card-line"></i> Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./menu.js"></script>
+</body>
+
+</html>
